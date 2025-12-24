@@ -36,6 +36,7 @@ Práctica_II/
 ├── main.py                             # Script principal de ejecución
 ├── index.html                          # Dashboard interactivo final
 ├── requirements.txt                    # Dependencias del proyecto
+├── LICENSE                             # Licencia MIT
 └── README.md                           # Documentación
 ```
 
