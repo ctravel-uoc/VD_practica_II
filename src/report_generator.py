@@ -46,7 +46,7 @@ def generate_html_report(charts, output_filename="index.html"):
 </head>
 <body>
     <div class="container">
-        <h1>Dashboard Estático: Igualdad de Género, Ley vs. Realidad</h1>
+        <h1>Igualdad de Género: Ley vs. Realidad</h1>
         <h3>Informe interactivo generado a partir de datos del Banco Mundial (WBL)</h3>
         <hr>
         <div class="chart-section">
