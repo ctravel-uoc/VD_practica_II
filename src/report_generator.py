@@ -89,4 +89,4 @@ def generate_html_report(charts, output_filename="index.html"):
     with open(output_filename, "w", encoding="utf-8") as f:
         f.write(html_template)
     
-    print(f"\n Archivo '{{output_filename}}' generado")
+    print(f"\n Archivo {output_filename} generado")

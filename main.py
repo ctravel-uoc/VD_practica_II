@@ -15,10 +15,10 @@ if __name__ == "__main__":
     try:
         df_ley, df_merged = prepare_data(FILE_LEY, FILE_REALIDAD)
     except Exception as e:
-        print(f"Error en la preparación de datos. Error: {e}")
+        print(f"Error {e} al preparpar datos")
         sys.exit(1)
 
-    print("\nGenerando gráficos Plotly...")
+    print("\nGenerando gráficos")
     
     charts = {
         'mapa': create_map_chart(df_ley),
@@ -47,4 +47,4 @@ if __name__ == "__main__":
 
     generate_html_report(charts, output_filename="index.html")
 
-    print("\nProceso completado.")
+    print("\nProceso completado")

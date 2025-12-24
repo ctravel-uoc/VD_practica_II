@@ -8,14 +8,14 @@ def load_data(file_path, sheet_name=None, skiprows=None):
         elif file_path.endswith('.csv'):
             df = pd.read_csv(file_path, skiprows=skiprows)
         else:
-            raise ValueError("Formato de archivo no soportado.")
+            raise ValueError("Formato de archivo no válido, solo csv o excel")
         return df
     except Exception as e:
-        print(f"Error FATAL cargando {file_path}: {e}")
+        print(f"Error al intentar cargar {file_path}: {e}")
         sys.exit(1)
 
 def prepare_data(file_ley, file_realidad):
-    print("Cargando y procesando datos...")
+    print("Cargando y procesando datos")
 
     df_ley = load_data(file_ley, sheet_name='WBL Panel 2024')
     df_parl_ancho = load_data(file_realidad, skiprows=4)
@@ -45,7 +45,7 @@ def prepare_data(file_ley, file_realidad):
     df_ley = df_ley.sort_values(by='Report Year')
     df_merged = df_merged.sort_values(by='Year')
 
-    print("Datos listos.")
+    print("Datos cargados")
     return df_ley, df_merged
 
 SECTORES = ['MOBILITY', 'WORKPLACE', 'PAY', 'MARRIAGE', 'PARENTHOOD', 'ENTREPRENEURSHIP', 'ASSETS', 'PENSION']

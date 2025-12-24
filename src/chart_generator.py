@@ -3,7 +3,7 @@ import pandas as pd
 from .data_loader import SECTORES
 
 def create_map_chart(df_ley):
-    print("Generando Gráfico 1: Mapa Coroplético animado.")
+    print("Generando gráfico 1")
     return px.choropleth(
         df_ley,
         locations="ISO Code",
@@ -17,7 +17,7 @@ def create_map_chart(df_ley):
     )
 
 def create_line_chart(df_ley):
-    print("Generando gráfico 2: Línea de evolución regional.")
+    print("Generando gráfico 2")
     
     df_linea_promedio = df_ley.groupby(['Report Year', 'Region'])['WBL INDEX'].mean().reset_index()
     
@@ -44,7 +44,7 @@ def create_radar_chart(df_ley, paises_comparar, chart_title):
     df_radar_data = df_ley[df_ley['Economy'].isin(paises_comparar) & (df_ley['Report Year'] == 2024)]
     
     if df_radar_data.empty or len(df_radar_data) < len(paises_comparar):
-        print(f"Datos de 2024 incompletos o faltantes para: {paises_comparar}")
+        print(f"Datos de 2024 incompletos para {paises_comparar}")
         return {} 
         
     df_radar_long = pd.melt(
@@ -68,7 +68,7 @@ def create_radar_chart(df_ley, paises_comparar, chart_title):
     return fig
 
 def create_scatter_chart(df_merged):
-    print("Generando gráfico 4 - scatter plot animado.")
+    print("Generando gráfico 4")
     fig = px.scatter(
         df_merged,
         x="WBL INDEX",
