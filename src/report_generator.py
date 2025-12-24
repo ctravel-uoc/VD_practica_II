@@ -14,7 +14,7 @@ def generate_html_report(charts, output_filename="index.html"):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard GitHub Pages: Ley vs. Realidad</title>
+    <title>Ley vs. Realidad</title>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <style>
         body {{ 
