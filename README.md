@@ -21,8 +21,8 @@ Preguntas clave:
 
 - ¿Se traducen las buenas leyes en una realidad igualitaria? ¿Y cómo afecta el nivel de ingresos (Income Group) a esta relación? (Gráfico de dispersión animado).
 
+## Estructura del proyecto
 
-## Estructura del proyecto
 ```
 Práctica_II/
 ├── data/
